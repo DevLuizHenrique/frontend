@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Monoton:wght@200;300;400;500;600;700;800&display=swap');
+
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #121212; /* Cor de fundo padrão para tema escuro */
+  color: #e0e0e0; /* Cor do texto padrão para tema escuro */
+  overflow-y: hidden; /* Permite rolagem vertical */
+  height: 100vh; /* Garante que o body ocupe 100% da altura da viewport */
+  margin: 0; /* Remove a margem padrão */
+}
+
+/* Garante que html e body ocupem 100% da altura e permitem rolagem */
+html {
+  height: 100%;
+  overflow-x: hidden; /* Oculta a rolagem horizontal, se necessário */
+}
+
+/* Estilos da barra lateral */
+.sidebar {
+  color: #e0e0e0;
+  background-color: #1f1f1f; /* Fundo da barra lateral para tema escuro */
+  position: fixed; /* Fixar a barra lateral na lateral */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px; /* Ajuste a largura conforme necessário */
+  overflow: hidden; /* Remove rolagem na barra lateral */
+  z-index: 1000; /* Garante que a barra lateral esteja acima do conteúdo principal */
+}
+
+/* Estilos do logo na barra lateral */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e0e0e0;
+  padding: 10px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: rgba(28, 17, 41, 0.88);
+}
+
+/* Estilos da barra de menu */
+.menu-bar {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
+  position: relative; /* Assegura que o botão de troca de tema esteja posicionado relativo a esta área */
+  overflow: hidden; /* Remove rolagem na barra de menu */
+}
+
+/* Oculta a barra de rolagem para navegadores baseados em WebKit */
+.menu-bar::-webkit-scrollbar {
+  display: none; /* Oculta a barra de rolagem */
+}
+
+/* Botão de troca de tema */
+.toggle-theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  z-index: 1000; /* Garante que o botão esteja acima de outros elementos */
+}
+
+/* Tema claro */
+body.light-mode {
+  background-color: #f5f5f5; /* Cor de fundo para tema claro */
+  color: #000000; /* Cor do texto para tema claro */
+}
+
+.sidebar.light-mode {
+  color: #000000;
+  background-color: #ffffff; /* Fundo da barra lateral para tema claro */
+}
+
+.logo.light-mode {
+  color: #000000;
+}
+
+.menu-bar.light-mode {
+  background-color: #ffffff; /* Fundo do menu para tema claro */
+}
+
+.content {
+  margin-left: 250px; /* Ajuste de acordo com a largura da barra lateral */
+  padding: 20px; /* Espaçamento interno */
+  min-height: calc(100vh - 40px); /* Ajuste a altura para permitir rolagem se necessário */
+  overflow-y: auto; /* Permite rolagem vertical no conteúdo principal */
+}
